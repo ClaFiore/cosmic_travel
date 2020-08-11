@@ -1,0 +1,12 @@
+<h1><%=@scientist.name %> - Scientist Detail Page</h1>
+
+<h3>Field of Study: <%=@scientist.field_of_study%></h3>
+<h3>Planets Visited: 
+<ul> <%@scientist.planets.each do |p| %>
+        <li><%=p.name%></li>
+    <% end %>
+</ul>
+
+
+<%= button_to "Delete Scientist", scientist_path(@scientist), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+

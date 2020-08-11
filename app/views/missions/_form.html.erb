@@ -1,0 +1,11 @@
+<%=render "errors_form"%>
+
+<%= form_for @mission do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :planet %>
+    <%= f.collection_select :planet_id, Planet.all, :id, :name %>
+    <%= f.label :scientist %>
+    <%= f.collection_select :scientist_id, Scientist.all, :id, :name %>
+    <%= f.submit %>
+    <% end %>
