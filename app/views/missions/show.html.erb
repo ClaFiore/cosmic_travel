@@ -1,2 +1,8 @@
-<h1>Missions#show</h1>
-<p>Find me in app/views/missions/show.html.erb</p>
+<h1><%=@mission.name%> - Missions Detail Page</h1>
+
+<h3>Scientist: <%= @mission.scientist.name %> </h3>
+<h3>Planet: <%= @mission.planet.name %> </h3>
+
+<%= button_to "Edit Mission", edit_mission_path, method: :get %><br>
+<%= button_to "Delete Mission", mission_path(@mission), method: :delete, data: {confirm: "Are you sure?"} %><br>
+<%= button_to "Back", missions_path, method: :get %>

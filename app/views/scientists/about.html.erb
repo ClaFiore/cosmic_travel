@@ -4,3 +4,7 @@
 <h3> Database count: </h3>
 <p> Total Number of Scientists: <%= @scientists.count %><p>
 <p> Total Number of Planets: <%= @planets.count %><p>
+
+<%= button_to "See All Scientists", scientists_path, method: :get %> <br>
+<%= button_to "See All Missions", missions_path, method: :get %> <br>
+<%= button_to "See All Planets", planets_path, method: :get %>

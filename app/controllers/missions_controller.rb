@@ -25,9 +25,18 @@ class MissionsController < ApplicationController
   end
 
   def update
+    @mission.update(mission_params)
+    if @mission.valid?
+      @mission.save
+      redirect_to mission_path(@mission)
+    else
+      render :new
+    end
   end
 
   def destroy
+    @mission.destroy
+    redirect_to missions_path
   end
 
   private

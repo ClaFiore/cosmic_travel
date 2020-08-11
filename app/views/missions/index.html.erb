@@ -1,6 +1,10 @@
 <h1>All Missions</h1>
 <ul>
     <% @missions.each do |m| %>
-        <li> <p> <%= m.name %> </p></li>
+        <li> <p> <%= link_to m.name, mission_path(m) %> </p></li>
     <%end%>
 </ul>
+
+
+<%= button_to "Add Mission", new_mission_path, method: :get %><br>
+<%= button_to "About Page", about_path, method: :get %>

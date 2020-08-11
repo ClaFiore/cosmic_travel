@@ -6,3 +6,6 @@
     <li><p><%= link_to s.name, scientist_path(s)%></p></li>
     <% end %>
     </ul>
+    <%= button_to "Add Scientist", new_scientist_path, method: :get %><br>
+    <%= button_to "About Page", about_path, method: :get %>
+
